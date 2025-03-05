@@ -135,7 +135,7 @@ final class ModUserUi(helpers: Helpers, modUi: ModUi):
         Granter.opt(_.SetKidMode).option {
           postForm(
             action := routes.Mod.kid(u.username),
-            title  := "Activate kid mode if not already the case",
+            title  := "Enable kid mode. Can only be disabled by the user from their settings.",
             cls    := "xhr"
           ):
             submitButton(cls := "btn-rack__btn yes-no-confirm", cls := u.kid.option("active"))("Kid")
